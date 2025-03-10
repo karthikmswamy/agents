@@ -1,0 +1,1 @@
+Accenture's 2025 business goals include introducing 100 industry-specific agentic AI tools to engage clients across many different sectors. The company will also be working to bring AI out of the virtual realm and into the physical world. Additionally, Accenture raised its full-year fiscal 2025 revenue growth guidance to 4%-7% in local currency, up from prior forecasts of 3%-6%.

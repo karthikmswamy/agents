@@ -9,7 +9,7 @@ load_dotenv()
 
 llm = LLM(
     model='gemini/gemini-1.5-flash',
-    api_key=os.environ["GEMINI_API_KEY"]
+    api_key=os.environ["GEMINI_API_KEY"],
 )
 
 info_agent = Agent(

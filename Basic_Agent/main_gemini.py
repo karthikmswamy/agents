@@ -1,6 +1,10 @@
 """
-Script that creates an agent using CrewAI to create a step by step documentation to create an API key on Google AI Studio.
+Script to create an agent for generating step-by-step documentation for creating an API key on Google AI Studio.
+This script runs using an API key from Google AI Studio.
+Ensure the following environment variables are set:
+- GEMINI_API_KEY
 """
+
 import os
 from crewai import Agent, Task, Crew, LLM
 from dotenv import load_dotenv
@@ -8,7 +12,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 llm = LLM(
-    model='gemini/gemini-1.5-flash',
+    model="gemini/gemini-1.5-flash",
     api_key=os.environ["GEMINI_API_KEY"],
 )
 
@@ -25,7 +29,7 @@ agent_task = Task(
     expected_output="Give a summary and a detailed answer as bullet points.",
     agent=info_agent,
     verbose=True,
-    output_file="output.md"
+    output_file="output.md",
 )
 
 crew = Crew(

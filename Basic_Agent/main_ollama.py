@@ -5,6 +5,7 @@ Ensure the following models are available:
 - llama3.2
 - gemma3
 """
+
 from time import time
 
 from crewai import Agent, Task, Crew, LLM
@@ -13,9 +14,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-llm=LLM(
+llm = LLM(
     # model='ollama/llama3.2',
-    model='ollama/gemma3',
+    model="ollama/gemma3",
     base_url="http://localhost:11434",
 )
 
@@ -32,7 +33,7 @@ agent_task = Task(
     expected_output="Give a summary and a detailed answer as bullet points.",
     agent=info_agent,
     verbose=True,
-    output_file="output.md"
+    output_file="output.md",
 )
 
 crew = Crew(
